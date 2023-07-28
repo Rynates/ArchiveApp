@@ -1,0 +1,38 @@
+package com.example.domain.model
+
+sealed class EndPoint(val path:String){
+    object Root:EndPoint(path = "/")
+    object TokenVerification:EndPoint(path = "/token_verification")
+    object GetUserInfo:EndPoint(path = "/get_user")
+    object GetAllUsers:EndPoint(path = "/get_allUsers")
+    object UpdateUserInfo:EndPoint(path = "/update_user")
+    object SignOut:EndPoint(path = "/sign_out")
+    object Unauthorized:EndPoint(path = "/unauthorized")
+    object Authorized:EndPoint(path = "/authorized")
+    object AddGeoFenceInfo:EndPoint(path = "/add_geofence")
+    object GetGeoFenceInfo:EndPoint(path = "/get_geofence")
+    object GetAllGeoFencesInfo:EndPoint(path = "/get_allGeoFences")
+    object GetOtherUserByName:EndPoint(path = "/get_otherUserByName")
+    object GetOtherUserById:EndPoint(path = "/get_otherUserById")
+    object DeleteGeoFenceInfo:EndPoint(path = "/delete_geofence")
+    object About:EndPoint(path = "/about")
+
+
+    object SignUp:EndPoint(path = "/sign_up")
+    object SignIn:EndPoint(path = "/sign_in")
+    object GetSecretInfo:EndPoint(path = "/secret")
+    object Authenticate:EndPoint(path = "/authenticate")
+    object AddRelativeInfo:EndPoint(path = "/add_relative")
+    object UpdateRelativeInfo:EndPoint(path = "/update_relative")
+    object GetRelativeInfo:EndPoint(path = "/get_relative")
+    object GetAllRelativesInfo:EndPoint(path = "/get_relatives")
+    object GetRelativeInfoById:EndPoint(path = "/get_relativeById")
+    object DeleteRelativeInfo:EndPoint(path = "/delete_relative")
+    object AddArchiveInfo:EndPoint(path = "/add_archive")
+    object GetArchivesInfo:EndPoint(path = "/get_archives")
+    object GetArchiveById:EndPoint(path = "get_archiveById")
+    object GetFundsInfo:EndPoint(path = "/get_funds")
+    object GetFundsByIdInfo:EndPoint(path = "/get_fundById")
+    object GetInventoriesInfo:EndPoint(path = "/get_inventories")
+    object GetInventoryById:EndPoint(path = "/get_documentById")
+}
